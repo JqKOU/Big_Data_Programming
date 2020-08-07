@@ -21,9 +21,8 @@ import scala.Tuple2;
 public class SparkRecommendationMovie {
 
 	// original data files
-	private static final String USER_URI = "file:///Users/jianqunkou/Desktop/bigdata/hw7/data/u.data";
-	// private static final String MOVIE_URI = "file:///f:/my talks and teaching/New folder/examples/datasets/u.item";
-	private static final String MOVIE_URI = "file:///Users/jianqunkou/Desktop/bigdata/hw7/data/u.item";
+	private static final String USER_URI = "file:///Users/*omitted*/data/u.data";
+	private static final String MOVIE_URI = "file:///Users/*omitted*/data/u.item";
 	
 	// let us focus on this user, can change to any other user
 	private static final int user = 356;
