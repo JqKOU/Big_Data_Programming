@@ -28,9 +28,9 @@ import scala.Tuple2;
 public class SparkNaiveBayes {
 
 	private static final String LABEL_SEPARATOR = "|";
-	private static final String TESTING_URI = "file:///Users/jianqunkou/Desktop/bigdata/hw8/data/NB_test_doc*.txt";
-	//private static final String CATEGORIES_URI = "file:///Users/jianqunkou/Desktop/bigdata/hw8/data/cate/*"; //don't know why this uri didn't work 
-	private static final String TRAINING_URI = "file:///Users/jianqunkou/Desktop/bigdata/hw8/data/NB_training_doc*.txt";
+	private static final String TESTING_URI = "file:///Users/**omitted for privacy purpose**/NB_test_doc*.txt";
+	//private static final String CATEGORIES_URI = "file:///Users/**omitted for privacy purpose**/*"; //don't know why this uri didn't work 
+	private static final String TRAINING_URI = "file:///Users/**omitted for privacy purpose**/NB_training_doc*.txt";
 	
 
 	public static void main(String[] args) throws IOException {
