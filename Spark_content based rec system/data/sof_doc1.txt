@@ -1,0 +1,24 @@
+What is the difference between Apache Spark and Apache Flink
+
+
+At first what do they have in common? Flink and Spark are both general-purpose data processing platforms and top level projects of the Apache Software Foundation (ASF). They have a wide field of application and are usable for dozens of big data scenarios. Thanks to expansions like SQL queries (Spark: Spark SQL, Flink: MRQL), Graph processing (Spark: GraphX, Flink: Spargel (base) and Gelly(library)), machine learning (Spark: MLlib, Flink: Flink ML) and stream processing (Spark Streaming, Flink Streaming). Both are capable of running in standalone mode, yet many are using them on top of Hadoop (YARN, HDFS). They share a strong performance due to their in memory nature.
+
+However, the way they achieve this variety and the cases they are specialized on differ.
+
+Differences: At first I'd like to provide two links which go in some detail on differences between Flink and Spark before summing it up. If you have the time have a look at Apache Flink is the 4G of BigData Analytics Framework and Flink and Spark Similarities and Differences
+
+In contrast to Flink, Spark is not capable of handling data sets larger than the RAM before version 1.5.x
+
+Flink is optimized for cyclic or iterative processes by using iterative transformations on collections. This is achieved by an optimization of join algorithms, operator chaining and reusing of partitioning and sorting. However, Flink is also a strong tool for batch processing. Flink streaming processes data streams as true streams, i.e., data elements are immediately "pipelined" though a streaming program as soon as they arrive. This allows to perform flexible window operations on streams. It is even capable of handling late data in streams by the use of watermarks. Furthermore Flink provides a very strong compatibility mode which makes it possible to use your existing storm, map reduce, ... code on the flink execution engine
+
+Spark on the other hand is based on resilient distributed datasets (RDDs). This (mostly) in-memory datastructure gives the power to sparks functional programming paradigm. It is capable of big batch calculations by pinning memory. Spark streaming wraps data streams into mini-batches, i.e., it collects all data that arrives within a certain period of time and runs a regular batch program on the collected data. While the batch program is running, the data for the next mini-batch is collected.
+
+Will Flink replace Hadoop?
+
+No, it will not. Hadoop consists of different parts:
+
+    HDFS - Hadoop Distributed Filesystem
+    YARN - Yet Another Resource Negotiator (or Resource Manager)
+    MapReduce - The batch processing Framework of Hadoop
+
+HDFS and YARN are still necessary as integral part of BigData clusters. Those two are building the base for other distributed technologies like distributed query engines or distributed databases. The main use-case for MapReduce is batch processing for data sets larger than the RAM of the cluster while Flink is designed for stream and iterative processing. So in general those two can co-exist even though I would strongly recommend to go with flinks stronger and more easy to use batch-capabilities.
