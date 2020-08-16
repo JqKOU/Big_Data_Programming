@@ -15,7 +15,7 @@ If the data set is too big and normal smart indexing memory swap doesn’t work,
 Cluster computing has its own challenge. One major challenge is that nodes (cheap computer) can fail, once node in which data stored failed, we could not read data back; moreover, if nodes fail during a long-running computation, we may have to start the computation all over again; another challenge is the network could be a bottleneck because a complex computation might need to move a lot of data, which can slow the computation down; finally, distributed programming (break data into chunks, assign chunks to different machine, write code to coordinate machine) is hard even for sophisticated programmer. 
 
 ### Ways to make cluster computing easy: Hadoop and Spark 
-Hadoop and Spark computation frameworks are solutions to the challenges of cluster computing and make Cluster Computing easy. As a programmer, we don’t need to worry about which node fails, what if it fails in the middle of computing, how to recover it and don’t need to worry about the complexity of distributed programming by using Hadoop and Spark.
+Hadoop and Spark computation frameworks are solutions to the challenges of cluster computing and make cluster computing easy. As a programmer, we don’t need to worry about which node fails, what if it fails in the middle of computing and don’t need to worry about the complexity of distributed programming by using Hadoop and Spark.
 
 ### About this repository 
 This repository is a collection of big data programming examples using either Hadoop or Spark which include: PageRank, similar items (minHash/LSH algorithms), recommendation system (content-based and collaborative filtering) and machine learning algorithms (Naive Bayes Classification).
