@@ -20,4 +20,5 @@ Hadoop and Spark computation frameworks are solutions to the challenges of clust
 ### About this repository 
 This repository is a collection of big data programming examples using either Hadoop or Spark which include: PageRank, similar items (minHash/LSH algorithms), recommendation system (content-based and collaborative filtering) and machine learning algorithms (Naive Bayes Classification).
 
-
+#### Reference
+Dr. Yu L., "Big Data Programming: cluster computing", summer 2020, Class Lecture
