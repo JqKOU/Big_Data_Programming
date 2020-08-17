@@ -18,7 +18,7 @@ Cluster computing has its own challenge. One major challenge is that nodes (chea
 Hadoop and Spark computation frameworks are solutions to the challenges of cluster computing and make cluster computing easy. As a programmer, we don't need to worry about which node fails, what if it fails in the middle of computing and don't need to worry about the complexity of distributed programming by using Hadoop and Spark.
 
 ### About this repository 
-This repository is a collection of big data programming examples using either Hadoop or Spark which include: PageRank, similar items (minHash/LSH algorithms), recommendation system (content-based and collaborative filtering) and machine learning algorithms (Naive Bayes Classification).
+This repository is a collection of big data programming practices using either Hadoop or Spark which include: PageRank, similar items (minHash/LSH algorithms), recommendation system (content-based and collaborative filtering) and machine learning algorithms (Naive Bayes Classification).
 
 #### Reference
 Dr. Yu L., "Big Data Programming: cluster computing", summer 2020, Class Lecture
